@@ -1,0 +1,17 @@
+package Assignment3.Module6;
+//Implement the Difference Array technique for range updates.
+public class DifferenceArray {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        int[] diff = new int[5];
+        int l = 1, r = 3, val = 5;
+        diff[l] += val;
+        if (r + 1 < diff.length)
+            diff[r + 1] -= val;
+        arr[0] = diff[0];
+        for (int i = 1; i < arr.length; i++)
+            arr[i] = arr[i - 1] + diff[i];
+        for (int x : arr)
+            System.out.print(x + " ");
+    }
+}
