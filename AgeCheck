@@ -1,0 +1,14 @@
+package Assignment2.ExceptionHandlingMultithreading;
+/*Write a program that throws an exception if age is less than 18.*/
+
+public class AgeCheck {
+    static void validate(int age) {
+        if (age < 18)
+            throw new ArithmeticException("Not eligible to vote");
+        else
+            System.out.println("Eligible");
+    }
+    public static void main(String[] args) {
+        validate(16);
+    }
+}
