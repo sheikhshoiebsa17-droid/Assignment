@@ -1,0 +1,30 @@
+package Assignment2.AdvancedJavaConcepts;
+/* Demonstrate the use of final keyword with variables, methods, and classes.*/
+final class FinalClass {
+    void display() {
+        System.out.println("Final class method");
+    }
+}
+
+class Parent {
+    final void show() {
+        System.out.println("hi");
+    }
+}
+
+class Child extends Parent {
+}
+
+public class QuestionFinalClass {
+    public static void main(String[] args) {
+
+        final int x = 10;
+        System.out.println("Final variable: " + x);
+
+        Parent obj = new Child();
+        obj.show();
+
+        FinalClass fc = new FinalClass();
+        fc.display();
+    }
+}
