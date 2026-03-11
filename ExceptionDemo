@@ -1,0 +1,21 @@
+package Assignment2.ExceptionHandlingMultithreading;
+/*Write a program to demonstrate checked and unchecked exceptions with examples.*/
+
+import java.io.FileReader;
+
+public class ExceptionDemo {
+    public static void main(String[] args) {
+
+        try {
+            int x = 10 / 0;  // Unchecked
+        } catch (ArithmeticException e) {
+            System.out.println("Unchecked Exception");
+        }
+
+        try {
+            FileReader fr = new FileReader("file.txt"); // Checked
+        } catch (Exception e) {
+            System.out.println("Checked Exception");
+        }
+    }
+}
